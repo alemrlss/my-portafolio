@@ -33,7 +33,7 @@ const Navbar = () => {
         >
           <Image
             src="/images/logo-am-image.png"
-            alt="hero image"
+            alt="logo image"
             width={60}
             height={60}
             draggable={false}

@@ -14,6 +14,10 @@ const variants = {
   },
 };
 
+const variant2 = {
+  hidden: { opacity: 0, x: -100, y:-100 },
+  visible: { opacity: 1, x: 0 ,y:0 },
+};
 function page() {
   const [counter, setCounter] = useState(0);
 
@@ -67,6 +71,18 @@ function page() {
       </div>
 
       <button> change align text</button>
+
+      <div className="mt-20">
+        <motion.div
+          className="bg-pink-500 h-20 w-20"
+          variants={variant2}
+          initial="hidden"
+          animate="visible"
+          transition={{ duration: 0.4 }} // Puedes ajustar la duración de la transición
+        >
+          {/* Contenido del componente */}
+        </motion.div>
+      </div>
     </div>
   );
 }
