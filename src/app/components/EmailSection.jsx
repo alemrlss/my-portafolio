@@ -53,10 +53,10 @@ const EmailSection = () => {
           saludar, ¡haré todo lo posible para responderte!
         </p>
         <div className="socials flex flex-row gap-2">
-          <Link href="github.com">
+          <Link href="https://github.com/alemrlss">
             <Image src={GithubIcon} alt="Github Icon" />
           </Link>
-          <Link href="linkedin.com">
+          <Link href="https://www.linkedin.com/in/alemrlss">
             <Image src={LinkedinIcon} alt="Linkedin Icon" />
           </Link>
         </div>
@@ -118,7 +118,7 @@ const EmailSection = () => {
               type="submit"
               className="bg-primary-500 hover:bg-primary-600 text-white font-medium py-2.5 px-5 rounded-lg w-full"
             >
-              Send Message
+              Enviar Mensaje
             </button>
           </form>
         )}

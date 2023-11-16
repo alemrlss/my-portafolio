@@ -15,14 +15,13 @@ const HeroSection = () => {
           transition={{ duration: 0.5 }}
           className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
         >
-          <h1 className="text-white  text-4xl sm:text-5xl lg:text-4xl lg:leading-normal font-extrabold">
+          <h1 className="text-white text-4xl sm:text-5xl lg:text-4xl lg:leading-normal font-extrabold">
             <span className="text-transparent bg-clip-text bg-gradient-to-r  text-white">
               Hola, soy
             </span>
             <br></br>
           </h1>
-          <h1 className="text-primary-900 mb-4 text-4xl sm:text-5xl lg:text-7xl lg:leading-normal font-extrabold">
-            {" "}
+          <span className="text-primary-900  text-4xl sm:text-5xl lg:text-6xl lg:leading-normal font-extrabold">
             <TypeAnimation
               sequence={[
                 "Alejandro Morales",
@@ -34,11 +33,11 @@ const HeroSection = () => {
                 "Desarrollador Backend",
                 1000,
               ]}
-              wrapper="span"
+              wrapper="h2"
               speed={50}
               repeat={Infinity}
             />
-          </h1>
+          </span>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
             Capacidad para transformar ideas creativas en aplicaciones
             funcionales y eficientes

@@ -8,7 +8,8 @@ const projectsData = [
   {
     id: 1,
     title: "TroveTraders",
-    description: "Project 1 description",
+    description:
+      "Desarrolle una red de compra inspirada en Marketplace Facebook. La plataforma permite a los usuarios conectarse y poder comercializar entre ellos cumpliendo los requisitos",
     image: "/images/projects/1.png",
     tag: ["All", "Web"],
     gitUrl: "/",
@@ -17,28 +18,31 @@ const projectsData = [
   {
     id: 2,
     title: "Dashboard Application",
-    description: "Project 2 description",
+    description:
+      "Desarrolle un Panel Administrativo para llevar a cabo las operaciones CRUD en el negocio principal de VenSalud S.A",
     image: "/images/projects/2.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
+    gitUrl: "https://github.com/alemrlss/client_app",
     previewUrl: "/",
   },
   {
     id: 3,
     title: "Rest Countries App",
-    description: "Project 3 description",
+    description:
+      "Plataforma que proporciona informacion detallada sobre diversos paises del mundo. Haciendo uso de Filtros y consumiendo un API externa",
     image: "/images/projects/3.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
+    gitUrl: "https://github.com/alemrlss/restcountries",
     previewUrl: "/",
   },
   {
     id: 4,
-      title: "To-do List Application",
-      description: "Project 4 description",
+    title: "To-do List Application",
+    description:
+      "Aplicacion de Lista de Tareas desarrollada en Javascript Vanilla y construida con WebPack. Pertmite a los usuarios organizar tareas por proyectos, marcar tareas como favoritas, completarlas, editarlas y eliminarlas",
     image: "/images/projects/4.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
+    gitUrl: "https://github.com/alemrlss/todo-list",
     previewUrl: "/",
   },
   {
@@ -49,7 +53,7 @@ const projectsData = [
     tag: ["All", "Robotica"],
     gitUrl: "/",
     previewUrl: "/",
-  }
+  },
 ];
 
 const ProjectsSection = () => {
@@ -86,7 +90,6 @@ const ProjectsSection = () => {
           name="Web"
           isSelected={tag === "Web"}
         />
-       
       </div>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
         {filteredProjects.map((project, index) => (
