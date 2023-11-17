@@ -5,7 +5,7 @@ import NavLink from "./NavLink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
 import Image from "next/image";
-
+import { motion } from "framer-motion";
 const navLinks = [
   {
     title: "Sobre mi",
@@ -31,13 +31,19 @@ const Navbar = () => {
           href={"/"}
           className="text-2xl md:text-5xl text-white font-semibold"
         >
-          <Image
-            src="/images/logo-am-image.png"
-            alt="logo image"
-            width={60}
-            height={60}
-            draggable={false}
-          />
+          <motion.div
+            initial={{ scale: 0, x: -100 }}
+            animate={{ rotate: 360, scale: 1, x: 0 }}
+            transition={{ duration: 0.4 }}
+          >
+            <Image
+              src="/images/logo-am-image.png"
+              alt="logo image"
+              width={60}
+              height={60}
+              draggable={false}
+            />
+          </motion.div>
         </Link>
         <div className="mobile-menu block md:hidden">
           {!navbarOpen ? (
