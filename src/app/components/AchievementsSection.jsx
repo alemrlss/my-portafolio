@@ -12,16 +12,15 @@ const AnimatedNumbers = dynamic(
 const achievementsList = [
   {
     metric: "Proyectos",
-    value: "4",
+    value: "6",
   },
   {
-  
     metric: "Skills",
     value: "10",
   },
   {
     metric: "Años",
-    value: "2",
+    value: "3",
   },
 ];
 

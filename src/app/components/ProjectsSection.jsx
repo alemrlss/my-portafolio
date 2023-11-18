@@ -3,99 +3,7 @@ import React, { useState, useRef } from "react";
 import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
 import { motion, useInView } from "framer-motion";
-
-const projectsData = [
-  {
-    id: 1,
-    title: "Aplicacion de Comercio Electronico",
-    description:
-      "Desarrolle una red de compra inspirada en Marketplace Facebook. La plataforma permite a los usuarios conectarse y poder comercializar entre ellos cumpliendo los requisitos",
-    image: "/images/projects/1.png",
-    tag: ["Todos", "Frontend", "Backend"],
-    gitUrl: "/",
-    previewUrl: "/",
-    skills: [
-      {
-        name: "ReactJS",
-      },
-      {
-        name: "NextJS",
-      },
-      {
-        name: "Tailwind",
-      },
-      {
-        name: "NodeJS",
-      },
-      {
-        name: "Express",
-      },
-      {
-        name: "MongoDB",
-      },
-    ],
-  },
-  {
-    id: 2,
-    title: "Dashboard Administrativo",
-    description:
-      "Desarrolle un Panel Administrativo para llevar a cabo las operaciones CRUD en el negocio principal de VenSalud S.A",
-    image: "/images/projects/2.jpg",
-    tag: ["Todos", "Frontend"],
-    gitUrl: "https://github.com/alemrlss/client_app",
-    previewUrl: "/",
-    skills: [
-      {
-        name: "ReactJS",
-      },
-      {
-        name: "NextJS",
-      },
-      {
-        name: "Tailwind",
-      },
-    ],
-  },
-  {
-    id: 3,
-    title: "Rest Countries App",
-    description:
-      "Plataforma que proporciona informacion detallada sobre diversos paises del mundo. Haciendo uso de Filtros y consumiendo un API externa",
-    image: "/images/projects/3.jpg",
-    tag: ["Todos", "Frontend"],
-    gitUrl: "https://github.com/alemrlss/restcountries",
-    previewUrl: "https://restcountriesalejandro.netlify.app/",
-    skills: [
-      {
-        name: "ReactJS",
-      },
-      {
-        name: "NextJS",
-      },
-      {
-        name: "Tailwind",
-      },
-    ],
-  },
-  {
-    id: 4,
-    title: "To-do List",
-    description:
-      "Aplicacion de Lista de Tareas desarrollada en Javascript Vanilla y construida con WebPack. Pertmite a los usuarios organizar tareas por proyectos, marcar tareas como favoritas, completarlas, editarlas y eliminarlas",
-    image: "/images/projects/4.png",
-    tag: ["Todos", "Frontend"],
-    gitUrl: "https://github.com/alemrlss/todo-list",
-    previewUrl: "https://todolistalejandro.netlify.app/",
-    skills: [
-      {
-        name: "Javascript",
-      },
-      {
-        name: "Webpack",
-      },
-    ],
-  },
-];
+import { projectsData } from "@/data/ProjectsData";
 
 const ProjectsSection = () => {
   const [tag, setTag] = useState("Todos");
@@ -153,6 +61,7 @@ const ProjectsSection = () => {
               imgUrl={project.image}
               gitUrl={project.gitUrl}
               previewUrl={project.previewUrl}
+              param={project.param}
               skills={project.skills}
             />
           </motion.li>

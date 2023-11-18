@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-
 import TailwindIcon from "../../../public/icons/tailwind-css.svg";
 import NestIcon from "../../../public/icons/nestjs-icon.svg";
 import MySqlIcon from "../../../public/icons/mysql-icon.svg";
