@@ -19,7 +19,7 @@ export const metadata = {
       "Alejandro Morales es un apasionado desarrollador fullstack, dedicado a crear experiencias web atractivas y transformar ideas creativas en aplicaciones funcionales y eficientes. ",
     images: [
       {
-        type: "image/jpg",
+        type: "image/png",
         width: 1200,
         height: 630,
         url: `https://i.im.ge/2023/08/12/jZM6rz.certificado-curso-profesional-de-react.png`,
