@@ -10,6 +10,20 @@ export const metadata = {
   icons: {
     icon: `${favicon.src}`,
   },
+  openGraph: {
+    type: "website",
+    locale: "es",
+    title: "Alejandro Morales - Portafolio Digital",
+    description: "DESCRIPCION OG",
+    images: [
+      {
+        url: favicon.src,
+        width: 1200,
+        height: 630,
+        alt: "Alejandro Morales - Portafolio Digital",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({ children }) {
