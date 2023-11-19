@@ -17,7 +17,14 @@ export const metadata = {
     title: "Alejandro Morales | Portafolio Digital",
     description:
       "Alejandro morales es un apasionado Desarrollador FullStack, dedicado a crear experiencias web atractivas y transformar ideas creativas en aplicaciones funcionales y eficientes. ",
-    image: `${favicon.src}`,
+    images: [
+      {
+        type: "image/png",
+        width: 1200,
+        height: 630,
+        url: `${image.src}`,
+      },
+    ],
     site_name: "Alejandro Morales | Portafolio Digital",
   },
 };
