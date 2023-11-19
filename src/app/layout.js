@@ -19,7 +19,7 @@ export const metadata = {
       "Alejandro morales es un apasionado Desarrollador FullStack, dedicado a crear experiencias web atractivas y transformar ideas creativas en aplicaciones funcionales y eficientes. ",
     images: [
       {
-        type: "image/png",
+        type: "image/jpg",
         width: 1200,
         height: 630,
         url: `${image.src}`,
