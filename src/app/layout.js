@@ -17,7 +17,7 @@ export const metadata = {
     description: "DESCRIPCION OG 2",
     images: [
       {
-        url: "https://i.ibb.co/frfXBrw/profile.jpg",
+        url: favicon.src,
         width: 1200,
         height: 630,
         alt: "Alejandro Morales - Portafolio Digital",
@@ -26,6 +26,7 @@ export const metadata = {
   },
 };
 
+console.log(favicon.src);
 export default function RootLayout({ children }) {
   return (
     <html lang="es" className="scroll-smooth">
