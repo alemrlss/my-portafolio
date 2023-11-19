@@ -41,14 +41,13 @@ const ProjectSection = ({ project, images }) => {
         <h2 className="text-white text-4xl text-center">{project.title}</h2>
         <div className="md:grid  md:grid-cols-2 gap-6 py-8 px-4 xl:gap-16 sm:py-16 xl:px-16 mt-2 lg:mt-2">
           <motion.div
-            className="h-96"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
           >
             <ImageGallery items={images} additionalClass="" />
           </motion.div>
-          <div className="text-white mt-20 lg:mt-0 text-center lg:text-start">
+          <div className="text-white lg:mt-0 text-center lg:text-start">
             <motion.div
               initial={{ opacity: 0.5, y: -300 }}
               animate={{ opacity: 1, y: 0 }}
@@ -68,7 +67,7 @@ const ProjectSection = ({ project, images }) => {
               )}
             </motion.div>
             <div>
-              <p className="text-sm">{project.completeDescription}</p>
+              <p className="text-sm lg:text-xl">{project.completeDescription}</p>
 
               <h2 className="mt-1 font-semibold text-center text-xl">
                 Tecnologias utilizadas:
