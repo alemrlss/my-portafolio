@@ -17,7 +17,7 @@ function Skills() {
     <motion.div
       className="flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0"
       initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1,  }}
+      whileInView={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
       <div className="mb-4">

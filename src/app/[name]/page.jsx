@@ -2,10 +2,12 @@
 "use client";
 import { useEffect, useState } from "react";
 import { projectsData } from "@/data/ProjectsData";
+import ProjectSection from "../components/ProjectSection";
 
 function Page({ params }) {
   const [project, setProject] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [images, setImages] = useState([]);
 
   useEffect(() => {
     const fetchProject = async () => {
@@ -13,9 +15,17 @@ function Page({ params }) {
         (project) => project.param == params.name
       );
       setProject(foundProject);
+
+      if (foundProject) {
+        setImages(
+          foundProject.images.map((image) => ({
+            original: image,
+            thumbnail: image,
+          }))
+        );
+      }
       setLoading(false);
     };
-
     fetchProject();
   }, [params.name]);
 
@@ -26,34 +36,11 @@ function Page({ params }) {
           <div className="border-t-4 border-blue-500 border-solid animate-spin rounded-full h-16 w-16"></div>
         </div>
       ) : project ? (
-        <div className="container mx-auto px-12 py-4 text-white " >
-          {project.title}
-          <nav>
-            <a href="#test3">Test 3</a>
-          </nav>
-          <div
-            className="bg-yellow-500 h-96 w-full flex min-h-screen"
-            id="test1"
-          >
-            fdsfd
-          </div>
-          <div className="bg-blue-500 h-96 w-full flex min-h-screen" id="test2">
-            fdsfd
-          </div>
-          <div className="bg-red-500 h-96 w-full flex min-h-screen" id="test3">
-            fdsfd
-          </div>
-          <div
-            className="bg-green-500 h-96 w-full flex min-h-screen"
-            id="test4"
-          >
-            fdsfd
-          </div>
-        </div>
+        <ProjectSection project={project} images={images} />
       ) : (
-        <div className="container mx-auto px-12 py-4 text-white">
-          No se encontró el proyecto
-        </div>
+        <section className="flex min-h-screen flex-col bg-[#121212] overflow-x-hidden lg:overflow-auto">
+          <h1 className="text-white"> H</h1>
+        </section>
       )}
     </main>
   );

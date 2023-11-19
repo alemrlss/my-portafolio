@@ -4,7 +4,7 @@ import GithubIcon from "../../../public/icons/github-icon.svg";
 import LinkedinIcon from "../../../public/icons/linkedin-icon.svg";
 import Link from "next/link";
 import Image from "next/image";
-
+import { motion } from "framer-motion";
 const EmailSection = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
 
@@ -18,15 +18,11 @@ const EmailSection = () => {
     const JSONdata = JSON.stringify(data);
     const endpoint = "/api/send";
 
-    // Form the request for sending data to the server.
     const options = {
-      // The method is POST because we are sending data.
       method: "POST",
-      // Tell the server we're sending JSON.
       headers: {
         "Content-Type": "application/json",
       },
-      // Body of the request is the JSON data we created above.
       body: JSONdata,
     };
 
@@ -38,6 +34,7 @@ const EmailSection = () => {
       setEmailSubmitted(true);
     }
   };
+
 
   return (
     <section
@@ -63,9 +60,13 @@ const EmailSection = () => {
       </div>
       <div>
         {emailSubmitted ? (
-          <p className="text-green-500 text-sm mt-2">
+          <motion.p
+            className="text-green-500 text-xl mt-4"
+            initial={{ opacity: 0, y: 500 }}
+            animate={{ opacity: 1, y: 0 }}
+          >
             Correo enviado correctamente!
-          </p>
+          </motion.p>
         ) : (
           <form className="flex flex-col" onSubmit={handleSubmit}>
             <div className="mb-6">
@@ -81,7 +82,7 @@ const EmailSection = () => {
                 id="email"
                 required
                 className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                placeholder="jacob@google.com"
+                placeholder="ejemplo@google.com"
               />
             </div>
             <div className="mb-6">
@@ -97,7 +98,7 @@ const EmailSection = () => {
                 id="subject"
                 required
                 className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                placeholder="Just saying hi"
+                placeholder="Asunto del Mensaje"
               />
             </div>
             <div className="mb-6">
@@ -111,7 +112,7 @@ const EmailSection = () => {
                 name="message"
                 id="message"
                 className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                placeholder="Let's talk about..."
+                placeholder="Detalles del mensaje..."
               />
             </div>
             <button
