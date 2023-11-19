@@ -19,7 +19,7 @@ export const metadata = {
     images: [
       {
         url: "https://i.ibb.co/nkLBVYF/og.png",
-        width: 1200,
+        width: 630,
         height: 630,
         alt: "Alejandro Morales - Portafolio Digital",
       },
