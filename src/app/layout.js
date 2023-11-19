@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "Alejandro Morales | Portafolio Digital",
   description:
-    "  Alejandro Morales es un apasionado desarrollador fullstack, dedicado a crear experiencias web atractivas y transformar ideas creativas en aplicaciones funcionales y eficientes. ",
+    "Alejandro Morales es un apasionado desarrollador fullstack, dedicado a crear experiencias web atractivas y transformar ideas creativas en aplicaciones funcionales y eficientes. ",
   icons: {
     icon: `${favicon.src}`,
   },
@@ -14,10 +14,11 @@ export const metadata = {
     type: "website",
     locale: "es",
     title: "Alejandro Morales - Portafolio Digital",
-    description: "DESCRIPCION OG 2",
+    description:
+      "Alejandro Morales es un apasionado desarrollador fullstack, dedicado a crear experiencias web atractivas y transformar ideas creativas en aplicaciones funcionales y eficientes. ",
     images: [
       {
-        url: favicon.src,
+        url: "https://i.ibb.co/nkLBVYF/og.png",
         width: 1200,
         height: 630,
         alt: "Alejandro Morales - Portafolio Digital",
@@ -26,7 +27,6 @@ export const metadata = {
   },
 };
 
-console.log(favicon.src);
 export default function RootLayout({ children }) {
   return (
     <html lang="es" className="scroll-smooth">
