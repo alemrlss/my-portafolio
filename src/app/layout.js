@@ -14,10 +14,10 @@ export const metadata = {
     type: "website",
     locale: "es",
     title: "Alejandro Morales - Portafolio Digital",
-    description: "DESCRIPCION OG",
+    description: "DESCRIPCION OG 2",
     images: [
       {
-        url: favicon.src,
+        url: "https://i.ibb.co/frfXBrw/profile.jpg",
         width: 1200,
         height: 630,
         alt: "Alejandro Morales - Portafolio Digital",
