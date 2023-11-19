@@ -67,7 +67,7 @@ const ProjectSection = ({ project, images }) => {
               )}
             </motion.div>
             <div>
-              <p className="text-sm lg:text-xl">{project.completeDescription}</p>
+              <p className="text-sm ">{project.completeDescription}</p>
 
               <h2 className="mt-1 font-semibold text-center text-xl">
                 Tecnologias utilizadas:
